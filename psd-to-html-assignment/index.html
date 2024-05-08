@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+</head>
+<style>
+	* {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	@media (min-width: 920px){
+	div#dropdown_menu {
+    display: none;
+    }
+    .header_area .nav_bar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 470px;
+    margin-left: 50px;
+    }  
+	}
+	@media (max-width: 919px){
+	 .header_area .nav_bar ul {
+	 display: none;
+	 }
+	}	
+	.header_area .nav_bar {
+    display: flex;
+    width: 100%;
+    max-width: 70%;
+}
+    header.header_area {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+   }
+   .nav_bar a img {
+    max-width: 65px;
+    background-image: url(images/logo_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 14px;
+}
+   .header_area .nav_bar {
+    display: flex;
+   }
+   .container {
+    max-width: 1920px;
+    padding: 0px 80px;
+   }
+   section.banner_area {
+    background: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 190px 0px 40px 0px;
+    margin-top: -190px;
+}
+section.banner_area .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.imageandinfo {
+    display: flex;
+}
+.imageandinfo .image_name img {
+    max-width: 350px;
+    width: 100%;
+}
+.name_designation {
+    position: absolute;
+    bottom: 14%;
+    left: -8%;
+}
+.image_name {
+    position: relative;
+}
+.main_text {
+    width: 100%;
+    max-width: 58%;
+}
+.imageandinfo {
+    display: flex;
+    width: 100%;
+    max-width: 40%;
+    gap: 50px;
+}
+
+.main_text h1 {
+    font-size: 70px;
+    line-height: 98px;
+    color: #f3ff36;
+    font-weight: 400;
+    font-family: "Dela Gothic One", sans-serif;
+    margin: 30px 0px;
+} 
+</style>
+<body>
+<section>
+	<div class="container">
+	<header class="header_area">		
+		<div class="nav_bar">
+			<a href="#"><img src="images/logo.png" alt="logo"></a>
+			<ul>
+				<a href="#"><li>Home</li></a>
+				<a href="#"><li>Class</li></a>
+				<a href="#"><li>Creation</li></a>
+				<a href="#"><li>FAQ</li></a>
+			</ul>           
+		</div>
+		<div id="dropdown_menu">
+		 <div>
+            	<i onclick="myFunction1()" class="fa-solid fa-bars"></i>
+            	<i onclick="myFunction1()" class="fa-solid fa-xmark"></i>
+        </div>
+		<div class="dp_area">
+			<ul>
+				<a href="#"><li>Home</li></a>
+				<a href="#"><li>Class</li></a>
+				<a href="#"><li>Creation</li></a>
+				<a href="#"><li>FAQ</li></a>
+			</ul>   
+		</div>
+	</div>
+	<div class="icon_buttons">
+		<a href="#"><img src="images/search.png" alt="search"></a>
+		<a href="#"><img src="images/cart.png" alt="cart"></a>
+		<a href="#" class="sign_up_btn">Login/Sign Up</a>
+	</div>
+	</header>
+	</div>
+</section>
+<section class="banner_area">
+	<div class="container">
+		<div class="main_text">
+			<h1>Discover<br> Your Creative Talent With us!</h1>
+			<p>Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut</p>
+			<div class="buttons_area">
+				<a href="#">Discount Class</a>
+				<a href="#">Catalogue</a>
+			</div>
+			<div class="participants">
+				<div class="rount_a round"></div>
+				<div class="rount_b round"></div>
+				<div class="rount_c">+</div>
+			</div>
+		</div>
+		<div class="imageandinfo">
+			<div class="image_name">
+				<img src="images/posing.png" alt="posing">
+				<div class="name_designation">
+					<h2>Riyana<br> Doe</h2>
+					<p>Art Director</p>
+				</div>
+			</div>
+            <div class="infoarea">
+            	<h3>Info <i class="fa-solid fa-chevron-down"></i></h3>
+            	<span>
+            		<h2>Student</h2>
+            		<p>24K</p>
+            	</span>
+            	<span>
+            		<h2>Materials</h2>
+            		<p>600+</p>
+            	</span>
+            	<span>
+            		<h2>Qty. Class</h2>
+            		<p>24</p>
+            	</span>
+            	<span>
+            		<h2>Mentors</h2>
+            		<p>48</p>
+            	</span>
+            </div>
+		</div>
+	</div>
+</section>
+<script>
+      function myFunction1(){
+      	var humberg = document.getElementById("dropdown_menu");
+      	humberg.classList.toggle("mystyle");
+      }                 	
+</script>
+</body>
+</html>
